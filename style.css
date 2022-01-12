@@ -89,15 +89,16 @@ top blog section
 lates cours
 --------------- */
 .main-course{
-    display: flex;
-    
+  
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 .courses-image img{
     width: 224px;
 height: 104px;
 }
 .space{
-    margin-left: 50px;
+    margin-right: 0px;
     
 }
 .change{
@@ -130,12 +131,50 @@ span{
 .corses{
     Width: 252.42px;
     Height: 269.79px;
-    
+   
     border-radius: 10px;
     box-shadow: 0px 5.342289924621582px 13.35572338104248px 0px #0000000D;
 }
-.spac{
-    margin-left: 60px;
+
+
+
+/*---------------- 
+    media queri 
+------------------*/
+/*---------------
+ only for phone 
+----------------*/
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+       
+    }
+    .players, .blogs, .main-course {
+        grid-template-columns: repeat(1,1fr);
+        text-align: center; 
+    }
+    
+    .style{
+        text-align: center;
+    }
+
+  .corses{
+      margin-bottom: 50px;
+      text-align: center;
+      margin-left: 200px;
+  }
+  
+    
+    .player, .blog{
+        flex-direction: column;
+    }
 }
-
-
+/*---------------- 
+    media queri 
+------------------*/
+/*---------------
+ only for ipade
+ ---------------- */
+@media screen {
+    
+}
